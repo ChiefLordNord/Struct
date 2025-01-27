@@ -40,17 +40,17 @@ def test_eval():
     try:
         eval("1..2")
         assert False, "No error for 1..2"
-    except Exception:
+    except Exception as e:
         print("got an error for 1..2")
     try:
         eval(" 1")
         assert False, "No error for [ 1]"
-    except Exception:
+    except Exception as e:
         print("got an error for [ 1]")
     try:
         eval("--1")
         assert False, "No error for [--1]"
-    except Exception:
+    except Exception as e:
         print("got an error for [--1]")
 
 if __name__ == "__main__":
